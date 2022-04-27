@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Klaviyo CSAT</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <>
+    <section class="header-container">
+      <!-- <a href="https://www.klaviyo.com/">
+        <img
+          src="https://d3k81ch9hvuctc.cloudfront.net/company/Edt86F/images/564499cb-92c5-4963-8f4e-afcb70e0ea37.png"
+          alt="klaviyo.com"
+        />
+      </a> -->
+
+      <a href="https://www.klaviyo.com">
+        <img
+          src="https://d3k81ch9hvuctc.cloudfront.net/company/Edt86F/images/564499cb-92c5-4963-8f4e-afcb70e0ea37.png"
+          alt="klaviyo.com"
+      /></a>
+    </section>
+
+    <hr />
+
+    <section class="content">
+      <p>Hello {{ticket.requester.first_name}} 👋</p>
+      <p>
+        We'd love to hear about your recent experience with our support team.
+        Please take a moment to give us insights on your experience!
+      </p>
+      <div>
+        <h3 class="Q-above">
+          <span>↓</span>How did {{ticket.assignee.first_name}} do? <span>↓</span>
+        </h3>
+        <div class="csat-container">
+          <div class="softbox softbox-10">
+            <a
+              href="https://survey.nicereply.com/klaviyo.csat/-/{{ticket.id}}?s=10"
+            >
+              <img alt="Awesome" src="../img/smile.png"
+            /></a>
+          </div>
+          <div class="softbox softbox-5">
+            <a
+              href="https://survey.nicereply.com/klaviyo.csat/-/{{ticket.id}}?s=5""
+            >
+              <img alt="Okay" src="../img/neutral.png"
+            /></a>
+          </div>
+          <div class="softbox softbox-3">
+            <a
+              href="https://survey.nicereply.com/klaviyo.csat/-/{{ticket.id}}?s=1""
+            >
+              <img alt="Poor" src="../img/sad.png"
+            /></a>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    <section class="comments-container">
+        <div class="border-comments">
+        <div class="request">
+            <p class="ticket-reminder">
+                Here's a reminder of what this request was about
+                </p>
+          </div>
+          <div class="comments">
+            <p class="ticket-comment-formatted"> "{{ticket.comments_formatted}}"</p>
+        </div>
+    </div>
+    </section>
+
+  </body>
+  <footer id="footer"></footer>
+</html>
