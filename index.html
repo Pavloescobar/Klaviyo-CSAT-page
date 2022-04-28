@@ -23,8 +23,11 @@
         We'd love to hear about your recent experience with our support team.
         Please take a moment to give us insights on your experience!
       </p>
-      <div>
+      <div class="Q-container">
         <h3 class="Q-above">
+          <span>↓</span>How did {{ticket.assignee.first_name}} do? <span>↓</span>
+        </h3>
+        <h3 class="Q-above-mobile">
           <span>↓</span>How did {{ticket.assignee.first_name}} do? <span>↓</span>
         </h3>
         <div class="csat-container">
@@ -61,8 +64,17 @@
                 </p>
           </div>
           <div class="comments">
-            <p class="ticket-comment-formatted"> "{{ticket.comments_formatted}}"</p>
+            <p class="ticket-comment-formatted"> {{ticket.comments_formatted}}</p>
         </div>
+    </div>
+    <div class="mobile-comments">
+      <div class="m-comment-txt">
+        <p>Here's a reminder of what this request was about</p>
+      </div>
+      <div class="m-comments-info">
+        <p>"{{ticket.comments_formatted}}"</p>
+      </div>
+</div>
     </div>
     </section>
 
